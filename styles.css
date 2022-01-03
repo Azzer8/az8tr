@@ -1,53 +1,90 @@
 nav {
-    text-align: center;
-    font-family: verdana;
-    font-size: 15px;
-    padding: 5px;
+  text-align: center;
+  font-family: verdana;
+  font-size: 15px;
+  padding: 5px;
 }
 
 .div2 {
-    display: block;
-    background-color: rgb(0, 0, 0);
-    width:100%;
-    height: auto;
-    border-radius: 13px;
-    box-shadow: 8px 10px 18px 0 rgba(0, 0, 0, 0.8),
-                        -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-    overflow: hidden;
+  display: block;
+  background-color: rgb(0, 0, 0);
+  width:100%;
+  height: auto;
+  border-radius: 13px;
+  box-shadow: 8px 10px 18px 0 rgba(0, 0, 0, 0.8),
+                      -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+  overflow: hidden;
 } 
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 footer {
-    background-color: #000000;
-    color:rgb(255, 255, 255);
-    padding-left: 4px;
-    border-radius: 10px;
+  background-color: #000000;
+  color:rgb(255, 255, 255);
+  padding-left: 4px;
+  border-radius: 10px;
 }
 
 .div1 {
-    width: auto;
-    height: auto;
-    padding: 4px;
+  width: auto;
+  height: auto;
+  padding: 4px;
 }
 
 button {
-    height: auto;
-    border: none;
-    background: #484d50;
-    color: #ffffff;
-    padding: 4px;
-    font-size: 13px;
-    border-radius: 10px;
-    position: relative;
-    box-sizing: border-box;
-    transition: all 600ms ease; 
+  border: none;
+  background: #484d5000;
 }
 
-button:hover {
-    background: rgba(0,0,0,0);
-    color: #ffffff;
-    box-shadow: inset 0 0 0 3px #ffffff;
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Verdana";
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #303030;
+  display: block;
+  line-height: 40px;
+  transition: 0.5s;
+  position: absolute;
+  background: #cdcdcd;
+  content: attr(data);
+  transform: translateY(-50%) rotateX(90deg);
+  border-radius: 10px;
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #d1d1d1;
+  display: block;
+  padding: 0 20px;
+  line-height: 40px;
+  transition: 0.7s;
+  position: relative;
+  background: #2f2f30;
+  content: attr(data);
+  transform: translateY(0) rotateX(0);
+  border-radius: 10px;
 }
